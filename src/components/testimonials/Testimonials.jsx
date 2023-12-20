@@ -1,15 +1,15 @@
-import React from 'react';
-import { BsLinkedin } from 'react-icons/bs';
-import { Pagination } from 'swiper';
+import React from 'react'
+import { BsLinkedin } from 'react-icons/bs'
+import { Pagination } from 'swiper'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react'
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import './testimonials.css';
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
+import './testimonials.css'
 
 const Testimonials = () => {
   const testimonials = [
@@ -32,7 +32,7 @@ const Testimonials = () => {
       link: 'https://www.linkedin.com/in/akuu-khan/',
       name: 'akbar (Aku) Khan',
       role: 'Full Stack Developer| Ruby on Rails | PostgreSQL | JavaScript | React | Redux | Html&Css | Python.',
-      test: 'I worked with Meri in the same team and her communication skills are very strong. Her programming skill is one of the bests, given the time frame in the field. She is a good team player.  She will probably fit in most of the companies not only because she\'s a good team worker, but also because she has very good skills and I know she has much more potential to be shown.',
+      test: "I worked with Meri in the same team and her communication skills are very strong. Her programming skill is one of the bests, given the time frame in the field. She is a good team player.  She will probably fit in most of the companies not only because she's a good team worker, but also because she has very good skills and I know she has much more potential to be shown.",
     },
     {
       id: 4,
@@ -53,30 +53,30 @@ const Testimonials = () => {
       link: 'https://www.linkedin.com/in/rex9/',
       name: 'Htet (Rex) Naing',
       role: 'Full Stack Developer | Mindful Mentor | Cheerful Team Player',
-      test: "Meri is really cheerful and supportive person. I know her when she reviewed my resume. Her feedback was so crystal clear and super effective for me. After that, even though she has no responsibility of reviewing my resume again. She helped me patiently when I ask her again and again. Meri is gifted in reviewing the work and giving advice to others. I feel really lucky to have her as the reviewer of my resume.",
+      test: 'Meri is really cheerful and supportive person. I know her when she reviewed my resume. Her feedback was so crystal clear and super effective for me. After that, even though she has no responsibility of reviewing my resume again. She helped me patiently when I ask her again and again. Meri is gifted in reviewing the work and giving advice to others. I feel really lucky to have her as the reviewer of my resume.',
     },
-  ];
+  ]
   return (
     <section id="testmonials">
       <h5>Feedback from my peers</h5>
       <h2>Testimonials</h2>
-      <Swiper 
+      <Swiper
         className="container testimonials__container"
         modules={[Pagination]}
         spaceBetween={40}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        >
+      >
         {testimonials.map((test) => (
           <SwiperSlide className="testimonial" key={test.id}>
-          <div className="client__avatar">
-            <a href={test.link}>
-              <BsLinkedin />
-            </a>
-          </div>
-          <h5 className='client__name'>{test.name}</h5>
-          <small className="client__review">{test.test}</small>
-        </SwiperSlide>
+            <div className="client__avatar">
+              <a href={test.link}>
+                <BsLinkedin />
+              </a>
+            </div>
+            <h5 className="client__name">{test.name}</h5>
+            <small className="client__review">{test.test}</small>
+          </SwiperSlide>
         ))}
       </Swiper>
     </section>

@@ -1,14 +1,14 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
-import { MdOutlineEmail } from 'react-icons/md';
-import './contact.css';
+import React, { useRef, useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { MdOutlineEmail } from 'react-icons/md'
+import './contact.css'
 
 const Contact = () => {
-  const [message, setMessage] = useState(false);
-  const formRef = useRef();
+  const [message, setMessage] = useState(false)
+  const formRef = useRef()
   const handleSubmit = (e) => {
-    e.preventDefault();
-    setMessage(true);
+    e.preventDefault()
+    setMessage(true)
     emailjs
       .sendForm(
         'service_k2qawqh',
@@ -18,15 +18,15 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          console.log(result.text)
         },
         (error) => {
-          console.log(error.text);
+          console.log(error.text)
         }
-      );
+      )
 
-    e.target.reset();
-  };
+    e.target.reset()
+  }
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -36,8 +36,8 @@ const Contact = () => {
           <article className="contact__option">
             <MdOutlineEmail className="contact__option-icon" />
             <h4>Email</h4>
-            <h5>merigogichashvili13@gmail.com</h5>
-            <a href="mailto:merigogichashvili13@gmail.com">Send a message</a>
+            <h5>natarh_70@mail.ru</h5>
+            <a href="mailto:natarh_70@mail.ru">Send a message</a>
           </article>
         </div>
         <form ref={formRef} onSubmit={handleSubmit}>
@@ -66,7 +66,7 @@ const Contact = () => {
         </form>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact
